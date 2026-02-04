@@ -1,0 +1,52 @@
+/* Page Header Styles */
+.page-header {
+  background: #ffffff;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #e9ecef;
+  margin-bottom: 2rem;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color: #6c757d;
+  font-size: 0.875rem;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.back-button::before {
+  content: '←';
+  font-size: 1rem;
+}
+
+.back-button:hover {
+  color: #212529;
+}
+
+.page-header-content {
+  max-width: 1200px;
+}
+
+.page-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #212529;
+  margin: 0 0 0.5rem 0;
+}
+
+.page-subtitle {
+  font-size: 0.875rem;
+  color: #6c757d;
+  margin: 0;
+}
+
+@media print {
+  .page-header {
+    display: none;
+  }
+}

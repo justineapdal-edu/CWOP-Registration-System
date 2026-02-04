@@ -1,0 +1,83 @@
+/* Vitals Print Page Styles */
+.vitals-print-page {
+  min-height: 100vh;
+  background: #f7fafc;
+  padding: 2rem;
+}
+
+.print-actions {
+  max-width: 900px;
+  margin: 0 auto 2rem;
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.success-message {
+  max-width: 900px;
+  margin: 2rem auto 0;
+  text-align: center;
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.success-message .success-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+  color: white;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.success-message h2 {
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.success-message p {
+  color: #718096;
+}
+
+/* Print styles */
+@media print {
+  .vitals-print-page {
+    background: white;
+    padding: 0;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .vitals-print-page {
+    padding: 1rem;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .action-buttons button {
+    width: 100%;
+  }
+}

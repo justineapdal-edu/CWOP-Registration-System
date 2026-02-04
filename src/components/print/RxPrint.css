@@ -1,0 +1,299 @@
+/* RX Print Component Styles */
+.rx-print {
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.rx-container {
+  padding: 3rem;
+  font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+/* Header */
+.rx-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.rx-logo-section {
+  flex-shrink: 0;
+}
+
+.rx-logo-image {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+}
+
+.rx-title-section {
+  flex: 1;
+  text-align: center;
+}
+
+.rx-title-section h1 {
+  font-size: 2rem;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.rx-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.25rem;
+}
+
+.rx-date {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.rx-organizer {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.rx-divider {
+  height: 1px;
+  background: var(--border-color);
+  margin: 1.5rem 0;
+}
+
+/* Sections */
+.rx-section {
+  margin: 1.5rem 0;
+}
+
+.rx-section-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Patient Info */
+.rx-info-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.rx-info-row {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed #e2e8f0;
+}
+
+.rx-info-row:last-child {
+  border-bottom: none;
+}
+
+.rx-label {
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.rx-value {
+  color: var(--text-primary);
+}
+
+.rx-patient-id {
+  font-family: 'Courier New', monospace;
+  font-weight: 700;
+  color: var(--primary-color);
+  font-size: 1.1rem;
+}
+
+/* Vitals */
+.rx-vitals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.rx-vital-item {
+  background: var(--gray-50);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.rx-vital-label {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.rx-vital-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.rx-vital-category {
+  font-size: 0.9rem;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.rx-notes {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #fffbeb;
+  border: 1px solid #fbbf24;
+  border-radius: 6px;
+}
+
+.rx-notes-label {
+  font-weight: 600;
+  color: #92400e;
+  margin-bottom: 0.5rem;
+}
+
+.rx-notes-content {
+  color: #78350f;
+  line-height: 1.6;
+}
+
+/* Services List */
+.rx-services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.rx-service-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem;
+  background: var(--gray-50);
+  border-radius: 6px;
+}
+
+.rx-service-id {
+  font-family: 'Courier New', monospace;
+  font-weight: 700;
+  color: var(--primary-color);
+  font-size: 1rem;
+}
+
+.rx-service-name {
+  color: #4a5568;
+}
+
+/* Footer */
+.rx-footer {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid #e2e8f0;
+}
+
+.rx-footer-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.rx-footer-item {
+  flex: 1;
+  min-width: 200px;
+}
+
+.rx-footer-label {
+  font-size: 0.85rem;
+  color: #718096;
+  margin-bottom: 0.25rem;
+}
+
+.rx-footer-value {
+  color: #2d3748;
+  font-weight: 600;
+}
+
+.rx-signature-section {
+  margin-top: 2rem;
+}
+
+.rx-signature-line {
+  text-align: center;
+}
+
+.signature-line {
+  width: 300px;
+  height: 60px;
+  border-bottom: 2px solid #2d3748;
+  margin: 0 auto 0.5rem;
+}
+
+.signature-label {
+  font-size: 0.9rem;
+  color: #4a5568;
+}
+
+/* Print-specific styles */
+@media print {
+  .rx-print {
+    box-shadow: none;
+  }
+  
+  .rx-container {
+    padding: 1.5rem;
+  }
+  
+  .rx-section {
+    page-break-inside: avoid;
+  }
+  
+  .rx-divider {
+    background: #000;
+  }
+  
+  .rx-vital-item {
+    border-color: #000;
+  }
+}
+
+@media (max-width: 768px) {
+  .rx-container {
+    padding: 1.5rem;
+  }
+  
+  .rx-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .rx-logo {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+  }
+  
+  .rx-title-section h1 {
+    font-size: 1.5rem;
+  }
+  
+  .rx-info-row {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+  
+  .rx-vitals-grid {
+    grid-template-columns: 1fr;
+  }
+}

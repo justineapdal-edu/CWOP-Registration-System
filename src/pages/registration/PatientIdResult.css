@@ -1,0 +1,215 @@
+/* Patient ID Result Page Styles */
+.patient-id-result-page {
+  min-height: 100vh;
+  background: var(--gray-50);
+}
+
+.result-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.success-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+.success-header h1 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.success-header p {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.patient-info-card,
+.patient-ids-card {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.patient-info-card h2,
+.patient-ids-card h2 {
+  color: var(--text-primary);
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.info-grid {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.info-item {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 1rem;
+}
+
+.info-item .label {
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.info-item .value {
+  color: var(--text-primary);
+  font-size: 0.875rem;
+}
+
+.instruction {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+.patient-ids-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.patient-id-item {
+  background: var(--gray-50);
+  border: 2px solid var(--primary-color);
+  border-radius: 6px;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.patient-id-code {
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  font-family: 'Courier New', monospace;
+}
+
+.patient-id-service {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.result-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Print styles */
+.print-only {
+  display: none;
+}
+
+@media print {
+  .patient-id-result-page {
+    background: white;
+    padding: 0;
+  }
+  
+  .result-container {
+    box-shadow: none;
+    padding: 1rem;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-only {
+    display: block;
+  }
+  
+  .patient-slip {
+    padding: 2rem;
+    border: 2px solid #000;
+    margin: 1rem 0;
+  }
+  
+  .patient-slip h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+  
+  .patient-slip h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #666;
+  }
+  
+  .slip-section {
+    margin: 0.75rem 0;
+    padding: 0.5rem 0;
+  }
+  
+  .slip-ids {
+    margin-top: 0.5rem;
+  }
+  
+  .slip-id {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    margin: 0.25rem 0;
+    background: #f0f0f0;
+  }
+  
+  .slip-id-code {
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+  
+  .slip-footer {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px dashed #999;
+    text-align: center;
+  }
+  
+  .slip-date {
+    font-size: 0.9rem;
+    color: #666;
+  }
+}
+
+@media (max-width: 768px) {
+  .patient-id-result-page {
+    padding: 1rem;
+  }
+  
+  .result-container {
+    padding: 1.5rem;
+  }
+  
+  .patient-id-code {
+    font-size: 1.25rem;
+  }
+  
+  .result-actions {
+    flex-direction: column;
+  }
+  
+  .result-actions button {
+    width: 100%;
+  }
+}

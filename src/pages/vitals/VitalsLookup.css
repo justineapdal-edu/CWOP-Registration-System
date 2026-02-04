@@ -1,0 +1,157 @@
+/* Vitals Lookup Page Styles */
+.vitals-lookup-page {
+  min-height: 100vh;
+  background: var(--gray-50);
+}
+
+.lookup-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Table Container */
+.table-container {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  gap: 1rem;
+}
+
+.table-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.table-title h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.record-count {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  background: var(--gray-100);
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+}
+
+.table-search {
+  flex: 0 0 300px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.625rem 0.875rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 0.875rem;
+  transition: border-color 0.2s;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.search-input::placeholder {
+  color: var(--text-secondary);
+}
+
+/* Table Styles */
+.patients-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.patients-table thead {
+  background: var(--gray-50);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.patients-table th {
+  padding: 1rem 1.5rem;
+  text-align: left;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.patients-table tbody tr {
+  border-bottom: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.patients-table tbody tr:hover {
+  background: var(--gray-50);
+}
+
+.patients-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.patients-table td {
+  padding: 1rem 1.5rem;
+  font-size: 0.875rem;
+  color: var(--text-primary);
+}
+
+.patient-id-cell {
+  font-family: 'Courier New', monospace;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+/* No Records */
+.no-records {
+  padding: 3rem;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .lookup-container {
+    padding: 1rem;
+  }
+
+  .table-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .table-search {
+    flex: 1;
+  }
+
+  .patients-table {
+    font-size: 0.8125rem;
+  }
+
+  .patients-table th,
+  .patients-table td {
+    padding: 0.75rem 1rem;
+  }
+
+  .table-title {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
