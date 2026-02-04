@@ -1,5 +1,6 @@
 // Vitals Context - Manages vital signs records
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
+import type { ReactNode } from 'react';
 import { storage, STORAGE_KEYS } from '../utils/storage';
 
 export interface VitalsRecord {
@@ -25,15 +26,9 @@ interface VitalsContextType {
 const VitalsContext = createContext<VitalsContextType | undefined>(undefined);
 
 export const VitalsProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [vitalsRecords, setVitalsRecords] = useState<VitalsRecord[]>([]);
-
-  // Load vitals from localStorage on mount
-  useEffect(() => {
-    const storedVitals = storage.get<VitalsRecord[]>(STORAGE_KEYS.VITALS);
-    if (storedVitals) {
-      setVitalsRecords(storedVitals);
-    }
-  }, []);
+  const [vitalsRecords, setVitalsRecords] = useState<VitalsRecord[]>(() => {
+    return storage.get<VitalsRecord[]>(STORAGE_KEYS.VITALS) || [];
+  });
 
   // Save vitals to localStorage whenever they change
   useEffect(() => {
