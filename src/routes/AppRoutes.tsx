@@ -1,6 +1,6 @@
 // App Routes Configuration
 import React from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Layout from '../components/layout/Layout';
 import Home from '../pages/home/Home';
 import Registration from '../pages/registration/Registration';
@@ -12,7 +12,7 @@ import PatientRecords from '../pages/records/PatientRecords';
 
 const AppRoutes: React.FC = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Layout>
         <Routes>
           {/* Home / Dashboard */}
@@ -34,7 +34,7 @@ const AppRoutes: React.FC = () => {
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </Layout>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
